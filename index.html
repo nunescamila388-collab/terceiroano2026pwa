@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu PWA</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+
+  <meta name="theme-color" content="#2196f3">
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('Service Worker registrado!'))
+        .catch(err => console.log(err));
+    }
+  </script>
+</head>
+
+<body>
+  <header>
+    <h1>Meu Primeiro PWA</h1>
+  </header>
+
+  <main>
+    <section>
+      <img src="icons/logo.jpg" width="200">
+      <p>Meu site PWA funcionando offline.</p>
+      <a href="sobre.html">
+        <button>Sobre</button>
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <p>2026 - Projeto Senac</p>
+  </footer>
+</body>
+</html>
